@@ -133,7 +133,7 @@ const EmailField = () => {
   return (
     <div className="rounded-lg  my-4 p-6 max-w-3xl mx-auto">
       <div className="space-y-4 max-w-lg mx-auto">
-        <div className="flex items-center rounded-full border-2 border-gray-500 border-primary h-[60px]">
+        <div className="flex items-center rounded-full border-[1px] border-white border-primary h-[60px]">
           <input
             id="email"
             type="email"

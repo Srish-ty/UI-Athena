@@ -364,8 +364,8 @@ const AccordionCont = () => {
         <Title>Frequently Asked Question </Title>
         <div className="w-[40vw] ">
           <div className="text-lg text-center text-white opacity-60">
-            If you can't find what you're looking for email our support team at
-            team@athenasquare.org and someone will get back to you
+            If you can&#39;t find what you&#39;re looking for email our support
+            team at team@athenasquare.org and someone will get back to you
           </div>
         </div>
       </section>

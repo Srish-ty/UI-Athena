@@ -13,7 +13,6 @@ import use2 from "./images/use2.png";
 import glasscard0 from "./images/glasscard0.png";
 import glasscard1 from "./images/glasscard1.png";
 import centre from "./images/centre.png";
-import Footer from "./images/footer.png";
 import {
   Accordion,
   AccordionContent,
@@ -21,6 +20,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import bigimage from "./images/bigimage.png";
+import socials from "./images/socials.png";
+import rights from "./images/rights.png";
 
 const accordionData = [
   {
@@ -373,10 +374,33 @@ const AccordionCont = () => {
   );
 };
 
-const FooterCont = () => {
+const footerData = [
+  "Blog",
+  "Privacy Policy",
+  "Code of Conduct",
+  "Terms and Conditions ",
+];
+
+const FooterLast = () => {
   return (
-    <div className="p-6 mx-auto flex flex-col justify-center items-center">
-      <Image src={Footer} alt="image" width={1200} height={500} />
+    <div className="my-7 mx-9">
+      <div className="first-part flex flex-row justify-between items-center p-7 border-[#8785ac] border-b ">
+        <div className="flex items-center space-x-4">
+          <Image src={logo} alt="Logo" width={200} height={100} />
+        </div>
+        <div className="flex space-x-4">
+          {footerData.map((data, index) => (
+            <span key={index}>{data}</span>
+          ))}
+        </div>
+      </div>
+
+      <div className="bottom-part my-8 flex flex-row justify-between">
+        <div className="first">
+          <Image src={socials} alt="Socials" width={200} height={100} />
+        </div>
+        <Image src={rights} alt="Rights" width={200} height={0} />
+      </div>
     </div>
   );
 };
@@ -410,9 +434,7 @@ export default function Home() {
       <BigImgCont />
 
       <AccordionCont />
-
-      <section className="hero h-[500px]"> first section </section>
-      <FooterCont />
+      <FooterLast />
     </div>
   );
 }

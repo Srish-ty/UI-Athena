@@ -152,7 +152,7 @@ const EmailField = () => {
 };
 
 const StatsField = () => (
-  <div className="relative w-full w-max mx-auto">
+  <div className="relative w-full lg:w-max mx-auto">
     <div className="absolute w-full inset-0 -z-10 rounded-lg bg-gradient-to-r from-[#F1A410] via-[#822B6F] at-26% via-[#B8BA4B] at-66% via-[#93F7F3] at-85% to-[#4A64C2] blur-[80px] opacity-60" />
     <div className="relative overflow-hidden w-full">
       <Image src={stats} alt="image" width={1000} height={1000} />
@@ -331,11 +331,11 @@ const InfoCont = () => {
         </div>
       </div>
 
-      <div className="flex flex-row justify-evenly">
+      <div className="flex flex-col md:flex-row justify-evenly items-center md:items-start">
         {InfoData.map((data, index) => (
           <div
             key={index}
-            className="p-6 w-[28%] my-6 text-center hover:bg-[#333157] rounded-lg hover:border-2 border-[#7773c8] border-primary"
+            className="p-6 w-[50%] md:w-[28%] my-2 md:my-6 text-center hover:bg-[#333157] rounded-lg hover:border-2 border-[#7773c8] border-primary"
           >
             <h1 className="text-2xl font-bold my-2">{data.title}</h1>
             <p className="w-[85%] mx-auto text-sm text-white text-opacity-70 p-3">

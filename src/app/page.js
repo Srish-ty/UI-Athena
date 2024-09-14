@@ -20,30 +20,70 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import bigimage from "./images/bigimage.png";
+
+const accordionData = [
+  {
+    value: "item-1",
+    trigger:
+      "How is Athena Screen better than existing tech and coding test tools?",
+    content: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    value: "item-2",
+    trigger:
+      "Why should I use a Developer Screening or Interview AI Assistant?",
+    content:
+      "Yes. It comes with default styles that matches the other components' aesthetic.",
+  },
+  {
+    value: "item-3",
+    trigger: "What Technical skills can I test candidates for?",
+    content:
+      "Yes. It's animated by default, but you can disable it if you prefer.",
+  },
+  {
+    value: "item-4",
+    trigger: "How do I interpret test scores?",
+    content:
+      "We score candidates on a 5-point scale. We provide overall scores, as well as a breakdown of scores into Problem Solving (Algorithms & Data Structures) and General Coding Logic & Development Skills. When deciding whether to interview candidates, we generally recommend the following:",
+  },
+  {
+    value: "item-5",
+    trigger: "What types of companies use Screen to hire engineers?",
+    content:
+      "We score candidates on a 5-point scale. We provide overall scores, as well as a breakdown of scores into Problem Solving (Algorithms & Data Structures) and General Coding Logic & Development Skills. When deciding whether to interview candidates, we generally recommend the following:",
+  },
+  {
+    value: "item-6",
+    trigger:
+      "How well do the tests predict phone screen and interview performance?",
+    content:
+      "We score candidates on a 5-point scale. We provide overall scores, as well as a breakdown of scores into Problem Solving (Algorithms & Data Structures) and General Coding Logic & Development Skills. When deciding whether to interview candidates, we generally recommend the following:",
+  },
+  {
+    value: "item-7",
+    trigger: "How large is the test data?",
+    content:
+      "We score candidates on a 5-point scale. We provide overall scores, as well as a breakdown of scores into Problem Solving (Algorithms & Data Structures) and General Coding Logic & Development Skills. When deciding whether to interview candidates, we generally recommend the following:",
+  },
+  {
+    value: "item-8",
+    trigger: "Are the tests getting better over time?",
+    content:
+      "We score candidates on a 5-point scale. We provide overall scores, as well as a breakdown of scores into Problem Solving (Algorithms & Data Structures) and General Coding Logic & Development Skills. When deciding whether to interview candidates, we generally recommend the following:",
+  },
+];
 
 const AccordionDemo = () => {
   return (
     <Accordion type="single" collapsible className="w-full">
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Is it accessible?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger>Is it styled?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger>Is it animated?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It&apos;s animated by default, but you can disable it if you
-          prefer.
-        </AccordionContent>
-      </AccordionItem>
+      {accordionData.map((item, index) => (
+        <AccordionItem key={index} value={item.value}>
+          <AccordionTrigger>{item.trigger}</AccordionTrigger>
+          <AccordionContent>{item.content}</AccordionContent>
+        </AccordionItem>
+      ))}
     </Accordion>
   );
 };
@@ -263,10 +303,71 @@ const BigCentralCont = () => {
   );
 };
 
+const InfoData = [
+  {
+    title: "Resume Parser",
+    desc: "Turn any resume/CV, job offer or HR document into a structured JSON.",
+  },
+  {
+    title: "Profile Insights",
+    desc: "Enrich any Resume/CV, profile or job offer with implicit hard-skills and soft-skills. industry, most challenging projects,  and achievments",
+  },
+  {
+    title: "Auto Update Old Resume Data",
+    desc: "Find the most up-to-date candidate details with a combination of latest online data & predictive analytics",
+  },
+];
+
+const InfoCont = () => {
+  return (
+    <section className="my-16">
+      <div className="headings my-10">
+        <Title>Ready to use tools</Title>
+        <div className="w-[40vw] mx-auto">
+          <div className="text-lg text-center text-white opacity-60 mx-auto">
+            A suite of AI solutions to enable leading HR experiences &
+            automations
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-row justify-evenly">
+        {InfoData.map((data, index) => (
+          <div
+            key={index}
+            className="p-6 w-[28%] my-6 text-center hover:bg-[#333157] rounded-lg hover:border-2 border-[#7773c8] border-primary"
+          >
+            <h1 className="text-2xl font-bold my-2">{data.title}</h1>
+            <p className="w-[85%] mx-auto text-sm text-white text-opacity-70 p-3">
+              {data.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+const BigImgCont = () => {
+  return (
+    <div className="w-full mx-auto flex flex-col items-center my-6">
+      <Image src={bigimage} alt="image" width={1200} height={500} />
+    </div>
+  );
+};
+
 const AccordionCont = () => {
   return (
     <div className="w-[80%] my-6 p-6 mx-auto flex flex-col justify-center items-center">
-      <Title>Frequently Asked Question </Title>
+      <section className="my-8">
+        <Title>Frequently Asked Question </Title>
+        <div className="w-[40vw] ">
+          <div className="text-lg text-center text-white opacity-60">
+            If you can't find what you're looking for email our support team at
+            team@athenasquare.org and someone will get back to you
+          </div>
+        </div>
+      </section>
       <AccordionDemo />
     </div>
   );
@@ -304,6 +405,9 @@ export default function Home() {
       <Advert />
       <CardsSec />
       <BigCentralCont />
+
+      <InfoCont />
+      <BigImgCont />
 
       <AccordionCont />
 

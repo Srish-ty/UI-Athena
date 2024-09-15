@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import {
-  logos,
+  logo,
   stat,
   brand0,
   brand2,
@@ -12,10 +12,10 @@ import {
   use0,
   use1,
   use2,
-  card0,
-  card1,
-  centres,
-  bigimgs,
+  glasscard0,
+  glasscard1,
+  centre,
+  bigimg,
   social,
   right,
 } from "./images";
@@ -106,7 +106,7 @@ const ColorButton = ({ children }) => (
 const NavBar = () => (
   <nav className="flex justify-between items-center p-8">
     <div className="flex items-center space-x-4">
-      <Image src={logos} alt="Logo" width={200} height={100} />
+      <Image src={logo} alt="Logo" width={200} height={100} />
     </div>
     <div className="flex space-x-4">
       <RoundedButton>Log in</RoundedButton>
@@ -257,14 +257,14 @@ const cardsInfo = [
     heading: "Bring your own data",
     descr:
       "18 months ago, Yogini and I started Peerlist as a side project to effectively showcase our proof of work, a problem we faced firsthand. We realized that LinkedIn, a prominent Professional Network, is not catering effectively to ",
-    img: card0,
+    img: glasscard0,
   },
   {
     heading: "Easy to Use ",
     descr:
       "18 months ago, Yogini and I started Peerlist as a side project to effectively showcase our proof of work, a problem we faced firsthand. We realized that LinkedIn, a prominent Professional Network, is not catering effectively to ",
 
-    img: card1,
+    img: glasscard1,
   },
 ];
 
@@ -301,7 +301,7 @@ const BigCentralCont = () => {
         </p>
       </div>
       <div>
-        <Image src={centres} alt="image" width={500} height={300} />
+        <Image src={centre} alt="image" width={500} height={300} />
       </div>
     </div>
   );
@@ -357,7 +357,7 @@ const BigImgCont = () => {
     <div className="w-full mx-auto flex flex-col items-center my-6">
       <div className="w-80% rounded-[5%] border border-solid border-[#44417a] bg-opacity-0">
         <div className="mx-auto my-10 w-[90%] rounded-[5%] border border-solid border-[#44417a] bg-opacity-0">
-          <Image src={bigimgs} alt="image" width={1200} height={500} />
+          <Image src={bigimg} alt="image" width={1200} height={500} />
         </div>
       </div>
     </div>
@@ -394,7 +394,7 @@ const FooterLast = () => {
     <div className="my-7 mx-9">
       <div className="first-part flex flex-col sm:flex-row justify-between items-center p-7 border-[#8785ac] border-b ">
         <div className="flexitems-center space-x-4">
-          <Image src={logos} alt="Logo" width={200} height={100} />
+          <Image src={logo} alt="Logo" width={200} height={100} />
         </div>
         <div className="flex space-x-4">
           {footerData.map((data, index) => (

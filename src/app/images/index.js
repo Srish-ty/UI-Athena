@@ -1,23 +1,23 @@
-import logos from "./logos.svg";
-import stat from "./stat.svg";
+import use0 from "./use0.png";
+import use1 from "./use1.png";
+import use2 from "./use2.png";
+import right from "./rights.png";
 import brand0 from "./brand0.png";
 import brand2 from "./brand2.png";
 import brand3 from "./brand3.png";
 import brand4 from "./brand4.png";
 import brand5 from "./brand5.png";
 import brand6 from "./brand6.png";
-import use0 from "./use0.png";
-import use1 from "./use1.png";
-import use2 from "./use2.png";
-import card0 from "./card0.svg";
-import card1 from "./card1.svg";
-import centres from "./centre.svg";
-import bigimgs from "./bigimgs.svg";
-import social from "./social.svg";
-import right from "./rights.svg";
+import glasscard0 from "./glasscard0.png";
+import glasscard1 from "./glasscard1.png";
+import social from "./social.png";
+import bigimg from "./bigimg.png";
+import centre from "./centre.png";
+import logo from "./logo1.png";
+import stat from "./stats.png";
 
 export {
-  logos,
+  logo,
   stat,
   brand0,
   brand2,
@@ -28,10 +28,10 @@ export {
   use0,
   use1,
   use2,
-  card0,
-  card1,
-  centres,
-  bigimgs,
+  glasscard0,
+  glasscard1,
+  centre,
+  bigimg,
   social,
   right,
 };

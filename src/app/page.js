@@ -1,6 +1,7 @@
 import Image from "next/image";
 import logo from "./images/logo1.png";
 import stats from "./images/stats.png";
+import stat from "./images/stat.svg";
 import brand0 from "./images/brand0.png";
 import brand2 from "./images/brand2.png";
 import brand3 from "./images/brand3.png";
@@ -11,8 +12,11 @@ import use0 from "./images/use0.png";
 import use1 from "./images/use1.png";
 import use2 from "./images/use2.png";
 import glasscard0 from "./images/glasscard0.png";
+import card0 from "./images/card0.svg";
 import glasscard1 from "./images/glasscard1.png";
+import card1 from "./images/card1.svg";
 import centre from "./images/centre.png";
+import centres from "./images/centre.svg";
 import {
   Accordion,
   AccordionContent,
@@ -20,6 +24,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import bigimage from "./images/bigimage.png";
+import bigimg from "./images/bigimg.png";
+import bigimgs from "./images/bigimgs.svg";
+import bigimgs1 from "./images/bigimgs1.svg";
 import socials from "./images/socials.png";
 import rights from "./images/rights.png";
 
@@ -156,7 +163,7 @@ const StatsField = () => (
   <div className="relative w-full lg:w-max mx-auto">
     <div className="absolute w-full inset-0 -z-10 rounded-lg bg-gradient-to-r from-[#F1A410] via-[#822B6F] at-26% via-[#B8BA4B] at-66% via-[#93F7F3] at-85% to-[#4A64C2] blur-[80px] opacity-60" />
     <div className="relative overflow-hidden w-full">
-      <Image src={stats} alt="image" width={1000} height={1000} />
+      <Image src={stat} alt="image" width={1000} height={1000} />
     </div>
   </div>
 );
@@ -254,14 +261,14 @@ const cardsInfo = [
     heading: "Bring your own data",
     descr:
       "18 months ago, Yogini and I started Peerlist as a side project to effectively showcase our proof of work, a problem we faced firsthand. We realized that LinkedIn, a prominent Professional Network, is not catering effectively to ",
-    img: glasscard0,
+    img: card0,
   },
   {
     heading: "Easy to Use ",
     descr:
       "18 months ago, Yogini and I started Peerlist as a side project to effectively showcase our proof of work, a problem we faced firsthand. We realized that LinkedIn, a prominent Professional Network, is not catering effectively to ",
 
-    img: glasscard1,
+    img: card1,
   },
 ];
 
@@ -298,7 +305,7 @@ const BigCentralCont = () => {
         </p>
       </div>
       <div>
-        <Image src={centre} alt="image" width={500} height={300} />
+        <Image src={centres} alt="image" width={500} height={300} />
       </div>
     </div>
   );
@@ -352,7 +359,11 @@ const InfoCont = () => {
 const BigImgCont = () => {
   return (
     <div className="w-full mx-auto flex flex-col items-center my-6">
-      <Image src={bigimage} alt="image" width={1200} height={500} />
+      <div className="w-80% rounded-[5%] border border-solid border-[#44417a] bg-opacity-0">
+        <div className="mx-auto my-10 w-[90%] rounded-[5%] border border-solid border-[#44417a] bg-opacity-0">
+          <Image src={bigimgs} alt="image" width={1200} height={500} />
+        </div>
+      </div>
     </div>
   );
 };

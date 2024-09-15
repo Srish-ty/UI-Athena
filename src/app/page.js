@@ -242,7 +242,7 @@ export const Advert = () => (
 
 const GlassyCard = ({ heading, descr, children }) => (
   <div
-    className="relative w-full max-w-[45%] mx-4 rounded-lg border border-solid border-[#44417a] bg-opacity-0 "
+    className="relative w-full max-w-[80%] md:max-w-[45%] mx-4 rounded-lg border border-solid border-[#44417a] bg-opacity-0 "
     style={{
       backgroundImage:
         "linear-gradient(to bottom, #9893E3 0%, #44417a 10%, #090a2b 30%)",
@@ -274,8 +274,8 @@ const cardsInfo = [
 
 const CardsSec = () => {
   return (
-    <div className="w-[85%] mx-auto">
-      <div className="flex flex-row justify-evenly w-full my-10">
+    <div className="w-full md:w-[85%] mx-auto">
+      <div className="flex flex-col items-center md:flex-row justify-evenly w-full my-10">
         {cardsInfo.map((card, index) => (
           <GlassyCard key={index} heading={card.heading} descr={card.descr}>
             <Image
@@ -395,8 +395,8 @@ const footerData = [
 const FooterLast = () => {
   return (
     <div className="my-7 mx-9">
-      <div className="first-part flex flex-row justify-between items-center p-7 border-[#8785ac] border-b ">
-        <div className="flex items-center space-x-4">
+      <div className="first-part flex flex-col sm:flex-row justify-between items-center p-7 border-[#8785ac] border-b ">
+        <div className="flexitems-center space-x-4">
           <Image src={logo} alt="Logo" width={200} height={100} />
         </div>
         <div className="flex space-x-4">
@@ -406,8 +406,8 @@ const FooterLast = () => {
         </div>
       </div>
 
-      <div className="bottom-part my-8 flex flex-row justify-between">
-        <div className="first">
+      <div className="bottom-part my-8 flex flex-col sm:flex-row justify-between items-center">
+        <div className="first bg-red-500 w-[200px]">
           <Image src={socials} alt="Socials" width={200} height={100} />
         </div>
         <Image src={rights} alt="Rights" width={200} height={0} />

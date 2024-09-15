@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import logo from "./images/logo1.png";
+import logos from "./images/logos.svg";
 import stats from "./images/stats.png";
 import stat from "./images/stat.svg";
 import brand0 from "./images/brand0.png";
@@ -28,7 +30,9 @@ import bigimg from "./images/bigimg.png";
 import bigimgs from "./images/bigimgs.svg";
 import bigimgs1 from "./images/bigimgs1.svg";
 import socials from "./images/socials.png";
+import social from "./images/social.svg";
 import rights from "./images/rights.png";
+import right from "./images/rights.svg";
 
 const accordionData = [
   {
@@ -110,7 +114,7 @@ const ColorButton = ({ children }) => (
 const NavBar = () => (
   <nav className="flex justify-between items-center p-8">
     <div className="flex items-center space-x-4">
-      <Image src={logo} alt="Logo" width={200} height={100} />
+      <Image src={logos} alt="Logo" width={200} height={100} />
     </div>
     <div className="flex space-x-4">
       <RoundedButton>Log in</RoundedButton>
@@ -392,12 +396,13 @@ const footerData = [
   "Terms and Conditions ",
 ];
 
+const socialData = ["Facebook", "Discord", "LinkedIn", "Twitter", "Instagram"];
 const FooterLast = () => {
   return (
     <div className="my-7 mx-9">
       <div className="first-part flex flex-col sm:flex-row justify-between items-center p-7 border-[#8785ac] border-b ">
         <div className="flexitems-center space-x-4">
-          <Image src={logo} alt="Logo" width={200} height={100} />
+          <Image src={logos} alt="Logo" width={200} height={100} />
         </div>
         <div className="flex space-x-4">
           {footerData.map((data, index) => (
@@ -407,10 +412,12 @@ const FooterLast = () => {
       </div>
 
       <div className="bottom-part my-8 flex flex-col sm:flex-row justify-between items-center">
-        <div className="first bg-red-500 w-[200px]">
-          <Image src={socials} alt="Socials" width={200} height={100} />
+        <div className="first flex flex-row justify-between w-[215px]">
+          {socialData.map((data, index) => (
+            <Image src={social} alt="Socials" width={32} height={32} />
+          ))}
         </div>
-        <Image src={rights} alt="Rights" width={200} height={0} />
+        <Image src={right} alt="Rights" width={200} height={0} />
       </div>
     </div>
   );

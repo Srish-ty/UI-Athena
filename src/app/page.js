@@ -97,12 +97,12 @@ const AccordionDemo = () => {
 };
 
 const RoundedButton = ({ children }) => (
-  <button className="rounded-3xl border-white border-2 px-5 py-3">
+  <button className="rounded-xl md:rounded-3xl border-white border-2 p-1 md:px-5 md:py-3">
     {children}
   </button>
 );
 const ColorButton = ({ children }) => (
-  <button className="rounded-3xl border-white border-[1px] px-5 py-3 bg-gradient-to-r from-[#9021D4] to-[#26126F] text-white  hover:opacity-80 transition-opacity">
+  <button className="rounded-xl md:rounded-3xl border-white border-[1px] p-1 md:px-5 md:py-3 bg-gradient-to-r from-[#9021D4] to-[#26126F] text-white  hover:opacity-80 transition-opacity">
     {children}
   </button>
 );
@@ -275,7 +275,7 @@ const cardsInfo = [
 const CardsSec = () => {
   return (
     <div className="w-full md:w-[85%] mx-auto">
-      <div className="flex flex-col items-center md:flex-row justify-evenly w-full my-10">
+      <div className="flex flex-col items-center md:items-start md:flex-row justify-evenly w-full my-10">
         {cardsInfo.map((card, index) => (
           <GlassyCard key={index} heading={card.heading} descr={card.descr}>
             <Image

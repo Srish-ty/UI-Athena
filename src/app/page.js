@@ -1,38 +1,30 @@
 "use client";
 import Image from "next/image";
-import logo from "./images/logo1.png";
-import logos from "./images/logos.svg";
-import stats from "./images/stats.png";
-import stat from "./images/stat.svg";
-import brand0 from "./images/brand0.png";
-import brand2 from "./images/brand2.png";
-import brand3 from "./images/brand3.png";
-import brand4 from "./images/brand4.png";
-import brand5 from "./images/brand5.png";
-import brand6 from "./images/brand6.png";
-import use0 from "./images/use0.png";
-import use1 from "./images/use1.png";
-import use2 from "./images/use2.png";
-import glasscard0 from "./images/glasscard0.png";
-import card0 from "./images/card0.svg";
-import glasscard1 from "./images/glasscard1.png";
-import card1 from "./images/card1.svg";
-import centre from "./images/centre.png";
-import centres from "./images/centre.svg";
+import {
+  logos,
+  stat,
+  brand0,
+  brand2,
+  brand3,
+  brand4,
+  brand5,
+  brand6,
+  use0,
+  use1,
+  use2,
+  card0,
+  card1,
+  centres,
+  bigimgs,
+  social,
+  right,
+} from "./images";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import bigimage from "./images/bigimage.png";
-import bigimg from "./images/bigimg.png";
-import bigimgs from "./images/bigimgs.svg";
-import bigimgs1 from "./images/bigimgs1.svg";
-import socials from "./images/socials.png";
-import social from "./images/social.svg";
-import rights from "./images/rights.png";
-import right from "./images/rights.svg";
 
 const accordionData = [
   {

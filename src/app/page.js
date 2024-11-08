@@ -406,7 +406,13 @@ const FooterLast = () => {
       <div className="bottom-part my-8 flex flex-col sm:flex-row justify-between items-center">
         <div className="first flex flex-row justify-between w-[215px]">
           {socialData.map((data, index) => (
-            <Image src={social} alt="Socials" width={32} height={32} />
+            <Image
+              src={social}
+              alt="Socials"
+              width={32}
+              height={32}
+              key={index}
+            />
           ))}
         </div>
         <Image src={right} alt="Rights" width={200} height={0} />
